@@ -32,7 +32,6 @@ jobs:
         with:
           title: 'chore: version packages'
           commit: 'chore: version packages'
-          publish: npm run publish:dry
           version: npm run changeset:version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

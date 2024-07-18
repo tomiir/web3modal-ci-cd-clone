@@ -19,12 +19,10 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
+      - name:
+      - uses: ./.github/actions/setup
 
-      - name: Publish packages
+      - name: Publish packages to NPM
         # Remove dry when ready
         run: npm run publish:dry
         env:
@@ -39,4 +37,4 @@ jobs:
           VERSION=$(node -pe "require('./packages/core/package.json').version")
           gh release create "v$VERSION" --title "Release v$VERSION" --notes "Packages: $PACKAGES"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.CHANGESETS_ACTION_TOKEN }}

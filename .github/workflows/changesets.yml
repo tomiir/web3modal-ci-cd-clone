@@ -33,7 +33,7 @@ jobs:
           publish: npm run publish:dry
           version: npm run changeset:version
         env:
-          GITHUB_TOKEN: ${{ secrets.CHANGESETS_ACTION_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Add Changeset PR Label
@@ -42,4 +42,4 @@ jobs:
           pr_number=$(echo "${{ steps.create_pr.outputs.pull-request-url }}" | awk -F '/' '{print $NF}')
           gh pr edit $pr_number --add-label changeset-pr
         env:
-          GITHUB_TOKEN: ${{ secrets.CHANGESETS_ACTION_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

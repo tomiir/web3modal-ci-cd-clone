@@ -37,4 +37,4 @@ jobs:
           VERSION=$(node -pe "require('./packages/core/package.json').version")
           gh release create "v$VERSION" --title "Release v$VERSION" --notes "Packages: $PACKAGES"
         env:
-          GITHUB_TOKEN: ${{ secrets.CHANGESETS_ACTION_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

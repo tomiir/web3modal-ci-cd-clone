@@ -100,7 +100,7 @@ jobs:
   #         name: Coverage
   #         json-final-path: ./coverage/coverage-merged-final.json
   #         json-summary-path: ./coverage/coverage-merged-summary.json
- 
+
   # ui-test:
   #   uses: ./.github/workflows/ui_tests.yml
   #   secrets: inherit

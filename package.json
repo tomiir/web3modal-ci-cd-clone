@@ -27,7 +27,7 @@
     "changeset:pre": "changeset pre enter",
     "changeset:pre:exit": "changeset pre exit",
     "changeset": "changeset; changeset version",
-    "publish:dry-run": "npm install; npm run build; changeset publish --dry-run",
+    "publish:dry": "npm install; npm run build; changeset publish --dry-run",
     "publish:latest": "npm install; npm run build; changeset publish",
     "publish:alpha": "npm install; npm run build; changeset publish --tag alpha",
     "publish:beta": "npm install; npm run build; changeset publish --tag beta",

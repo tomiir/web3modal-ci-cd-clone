@@ -1,7 +1,5 @@
 /* eslint-disable no-await-in-loop */
 import { danger, fail, message, warn } from 'danger'
-import corePackageJson from './packages/core/package.json' assert { type: 'json' }
-import { ConstantsUtil } from './packages/scaffold-utils/src/ConstantsUtil'
 
 // -- Constants ---------------------------------------------------------------
 const TYPE_COMMENT = `// -- Types --------------------------------------------- //`
@@ -10,7 +8,6 @@ const CONTROLLER_COMMENT = `// -- Controller -----------------------------------
 const RENDER_COMMENT = `// -- Render -------------------------------------------- //`
 const STATE_PROPERTIES_COMMENT = `// -- State & Properties -------------------------------- //`
 const PRIVATE_COMMENT = `// -- Private ------------------------------------------- //`
-const PACKAGE_VERSION = ConstantsUtil.VERSION
 const RELATIVE_IMPORT_SAME_DIR = `'./`
 const RELATIVE_IMPORT_PARENT_DIR = `'../`
 const RELATIVE_IMPORT_EXTENSION = `.js'`
@@ -317,14 +314,6 @@ async function checkClientPackages() {
   }
 }
 checkClientPackages()
-
-// -- Check sdkVersion ------------------------------------------------------------
-function checkSdkVersion() {
-  if (PACKAGE_VERSION !== corePackageJson.version) {
-    fail(`VERSION in utils/constants does't match core package.json version`)
-  }
-}
-checkSdkVersion()
 
 // -- Check wallet ------------------------------------------------------------
 

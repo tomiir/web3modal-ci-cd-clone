@@ -51,5 +51,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          VERSION=$(node -pe "require('./packages/core/package.json').version")
-          gh release create "$VERSION" --target main
+          VERSION=$(node -pe "require('./packages/wallet/package.json').version")
+          gh release create "$VERSION" --generate-notes --target main

@@ -1,5 +1,20 @@
 # @web3modal/scaffold
 
+## 5.0.8
+
+### Patch Changes
+
+- [`8ae1f69`](https://github.com/WalletConnect/web3modal/commit/8ae1f6940f0a37fc04bffde740eca649839d1791) Thanks [@tomiir](https://github.com/tomiir)! - feat: some feature
+
+- Updated dependencies [[`8ae1f69`](https://github.com/WalletConnect/web3modal/commit/8ae1f6940f0a37fc04bffde740eca649839d1791)]:
+  - @web3modal/common@5.0.8
+  - @web3modal/core@5.0.8
+  - @web3modal/scaffold-ui@5.0.8
+  - @web3modal/scaffold-utils@5.0.8
+  - @web3modal/siwe@5.0.8
+  - @web3modal/ui@5.0.8
+  - @web3modal/wallet@5.0.8
+
 ## 5.0.7
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @web3modal/polyfills
 
+## 5.0.8
+
+### Patch Changes
+
+- [`8ae1f69`](https://github.com/WalletConnect/web3modal/commit/8ae1f6940f0a37fc04bffde740eca649839d1791) Thanks [@tomiir](https://github.com/tomiir)! - feat: some feature
+
 ## 5.0.7
 
 ### Patch Changes

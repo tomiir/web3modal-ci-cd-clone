@@ -1,11 +1,11 @@
 > [!NOTE]
-> Looking for v2? [switch the branch](https://github.com/WalletConnect/web3modal/tree/V2).
+> Looking for v2? [switch the branch](https://github.com/WalletConnect/web3rocky/tree/V2).
 
-#### 📚 [Documentation](https://docs.walletconnect.com/web3modal/about)
+#### 📚 [Documentation](https://docs.walletconnect.com/web3rocky/about)
 
-#### 🧪 [Laboratory](https://lab.web3modal.com)
+#### 🧪 [Laboratory](https://lab.web3rocky.com)
 
-#### 🔗 [Website](https://web3modal.com)
+#### 🔗 [Website](https://web3rocky.com)
 
 # Web3Modal
 
@@ -57,13 +57,13 @@ For example: `npm run changeset:pre a123bas2`
 3. Merge your feature branch into `V4`
 4. Create a new branch from `V4` and name it with the version tag
 5. Run `npm run changeset` and set new custom version, enter prelease mode first if you want to add a tag to the version.
-6. Update version in `ConstantsUtil` in `@web3modal/scaffold-utils` to the correct version
+6. Update version in `ConstantsUtil` in `web3rockyscaffold-utils` to the correct version
 7. Create a new `PR` with Release Notes and merge into `V4`
 8. Checkout `V4` and run `npm run publish:latest`
 9. Draft a new release in GitHub and create new tag
 10. Click on `Generate Change` and only leave the link with difference. Paste in your changelog from PR.
 11. Check `Set as the last release` and publish release.
-12. Update Web3Modal for https://web3modal.com/ (https://github.com/WalletConnect/www-web3modal) and create a PR
+12. Update Web3Modal for https://web3rocky.com/ (https://github.com/WalletConnect/www-web3rocky) and create a PR
 13. Update Web3Modal for https://app.web3inbox.com (https://github.com/WalletConnect/web3inbox) and create a PR
 
 ### Running tests

@@ -1,6 +1,6 @@
-#### 📚 [Documentation](https://docs.walletconnect.com/2.0/web3modal/about)
+#### 📚 [Documentation](https://docs.walletconnect.com/2.0/web3rocky/about)
 
-#### 🔗 [Website](https://web3modal.com)
+#### 🔗 [Website](https://web3rocky.com)
 
 # Web3Modal
 

@@ -12,22 +12,22 @@
 '@examples/vue-ethers5': patch
 '@examples/vue-solana': patch
 '@examples/vue-wagmi': patch
-'@web3modal/cdn': patch
-'@web3modal/common': patch
-'@web3modal/core': patch
-'@web3modal/ethers': patch
-'@web3modal/ethers5': patch
-'@web3modal/polyfills': patch
-'@web3modal/scaffold': patch
-'@web3modal/scaffold-react': patch
-'@web3modal/scaffold-ui': patch
-'@web3modal/scaffold-utils': patch
-'@web3modal/scaffold-vue': patch
-'@web3modal/siwe': patch
-'@web3modal/solana': patch
-'@web3modal/ui': patch
-'@web3modal/wagmi': patch
-'@web3modal/wallet': patch
+'web3rockycdn': patch
+'web3rocky-common': patch
+'web3rocky-core': patch
+'web3rockyethers': patch
+'web3rockyethers5': patch
+'web3rocky-polyfills': patch
+'web3rockyscaffold': patch
+'web3rockyscaffold-react': patch
+'web3rockyscaffold-ui': patch
+'web3rockyscaffold-utils': patch
+'web3rockyscaffold-vue': patch
+'web3rockysiwe': patch
+'web3rockysolana': patch
+'web3rockyui': patch
+'web3rockywagmi': patch
+'web3rocky-wallet': patch
 ---
 
 feat: some feature

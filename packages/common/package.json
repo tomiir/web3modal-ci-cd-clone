@@ -1,5 +1,5 @@
 {
-  "name": "@web3modal/common",
+  "name": "web3rocky-common",
   "version": "5.0.7",
   "type": "module",
   "main": "./dist/esm/index.js",
@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "build:clean": "rm -rf dist",
-    "build:common": "tsc --build",
+    "build": "tsc --build",
     "watch": "tsc --watch",
     "typecheck": "tsc --noEmit",
     "test": "vitest run --dir tests --coverage.enabled=true --coverage.reporter=json --coverage.reporter=json-summary --coverage.reportOnFailure=true",
@@ -24,16 +24,16 @@
     "utils",
     "types",
     "web3",
-    "web3modal"
+    "web3rocky"
   ],
   "author": "WalletConnect <walletconnect.com>",
   "license": "Apache-2.0",
-  "homepage": "https://github.com/web3modal/web3modal",
+  "homepage": "https://github.com/web3rocky/web3rocky",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/web3modal/web3modal.git"
+    "url": "git+https://github.com/web3rocky/web3rocky.git"
   },
   "bugs": {
-    "url": "https://github.com/web3modal/web3modal/issues"
+    "url": "https://github.com/web3rocky/web3rocky/issues"
   }
 }

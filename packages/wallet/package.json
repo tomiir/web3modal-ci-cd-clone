@@ -1,5 +1,5 @@
 {
-  "name": "@web3modal/wallet",
+  "name": "web3rocky-wallet",
   "version": "5.0.7",
   "type": "module",
   "main": "./dist/esm/index.js",
@@ -10,33 +10,33 @@
   ],
   "scripts": {
     "build:clean": "rm -rf dist",
-    "build:wallet": "tsc --build",
+    "build": "tsc --build",
     "watch": "tsc --watch",
     "typecheck": "tsc --noEmit",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
     "@walletconnect/logger": "2.1.2",
-    "@web3modal/polyfills": "5.0.7",
+    "web3rocky-polyfills": "5.0.7",
     "zod": "3.22.4"
   },
   "keywords": [
     "web3",
     "crypto",
     "ethereum",
-    "web3modal",
+    "web3rocky",
     "walletconnect",
     "lit",
     "webcomponents"
   ],
   "author": "WalletConnect <walletconnect.com>",
   "license": "Apache-2.0",
-  "homepage": "https://github.com/web3modal/web3modal",
+  "homepage": "https://github.com/web3rocky/web3rocky",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/web3modal/web3modal.git"
+    "url": "git+https://github.com/web3rocky/web3rocky.git"
   },
   "bugs": {
-    "url": "https://github.com/web3modal/web3modal/issues"
+    "url": "https://github.com/web3rocky/web3rocky/issues"
   }
 }

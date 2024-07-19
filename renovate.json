@@ -24,7 +24,7 @@
         "ethers",
         "@solana/web3.js"
       ],
-      "matchPackagePrefixes": ["@web3modal/"],
+      "matchPackagePrefixes": ["web3rocky"],
       "prPriority": 10
     }
   ]

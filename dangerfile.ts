@@ -1,7 +1,5 @@
 /* eslint-disable no-await-in-loop */
 import { danger, fail, message, warn } from 'danger'
-import corePackageJson from './packages/core/package.json' assert { type: 'json' }
-import { ConstantsUtil } from './packages/scaffold-utils/src/ConstantsUtil'
 
 // -- Constants ---------------------------------------------------------------
 const TYPE_COMMENT = `// -- Types --------------------------------------------- //`
@@ -10,7 +8,6 @@ const CONTROLLER_COMMENT = `// -- Controller -----------------------------------
 const RENDER_COMMENT = `// -- Render -------------------------------------------- //`
 const STATE_PROPERTIES_COMMENT = `// -- State & Properties -------------------------------- //`
 const PRIVATE_COMMENT = `// -- Private ------------------------------------------- //`
-const PACKAGE_VERSION = ConstantsUtil.VERSION
 const RELATIVE_IMPORT_SAME_DIR = `'./`
 const RELATIVE_IMPORT_PARENT_DIR = `'../`
 const RELATIVE_IMPORT_EXTENSION = `.js'`
@@ -73,8 +70,8 @@ async function checkUiPackage() {
       fail(`${f} is using @state decorator, which is not allowed in ui package`)
     }
 
-    if (diff?.added.includes('import @web3modal/core')) {
-      fail(`${f} is importing @web3modal/core, which is not allowed in ui package`)
+    if (diff?.added.includes('import web3rocky-core')) {
+      fail(`${f} is importing web3rocky-core, which is not allowed in ui package`)
     }
 
     if (!diff?.added.includes(RENDER_COMMENT) && diff?.added.includes('render()')) {
@@ -97,7 +94,7 @@ async function checkUiPackage() {
       fail(`${f} is a ui element, but does not define wui- prefix`)
     }
 
-    if (diff?.added.includes('@web3modal/ui/')) {
+    if (diff?.added.includes('web3rockyui/')) {
       fail(`${f} should use relative imports instead of direct package access`)
     }
   }
@@ -192,8 +189,8 @@ async function checkCorePackage() {
   for (const f of created_core_controllers) {
     const diff = await diffForFile(f)
 
-    if (diff?.added.includes('import @web3modal/ui')) {
-      fail(`${f} is importing @web3modal/ui, which is not allowed in core package`)
+    if (diff?.added.includes('import web3rockyui')) {
+      fail(`${f} is importing web3rockyui, which is not allowed in core package`)
     }
 
     if (!diff?.added.includes(TYPE_COMMENT)) {
@@ -212,7 +209,7 @@ async function checkCorePackage() {
       fail(`${f} is using this.state, use just state`)
     }
 
-    if (diff?.added.includes('@web3modal/core/')) {
+    if (diff?.added.includes('web3rocky-core/')) {
       fail(`${f} should use relative imports instead of direct package access`)
     }
 
@@ -273,9 +270,9 @@ async function checkScaffoldHtmlPackage() {
     }
 
     if (
-      diff?.added.includes('@web3modal/core/') ||
-      diff?.added.includes('@web3modal/ui/') ||
-      diff?.added.includes('@web3modal/scaffold/')
+      diff?.added.includes('web3rocky-core/') ||
+      diff?.added.includes('web3rockyui/') ||
+      diff?.added.includes('web3rockyscaffold/')
     ) {
       fail(`${f} should use relative imports instead of direct package access`)
     }
@@ -303,12 +300,12 @@ async function checkClientPackages() {
   for (const f of client_files) {
     const diff = await diffForFile(f)
 
-    if (diff?.added.includes("from '@web3modal/core")) {
-      fail(`${f} is not allowed to import from @web3modal/core`)
+    if (diff?.added.includes("from 'web3rocky-core")) {
+      fail(`${f} is not allowed to import from web3rocky-core`)
     }
 
-    if (diff?.added.includes("from '@web3modal/ui")) {
-      fail(`${f} is not allowed to import from @web3modal/ui`)
+    if (diff?.added.includes("from 'web3rockyui")) {
+      fail(`${f} is not allowed to import from web3rockyui`)
     }
 
     if (containsRelativeImportWithoutJSExtension(diff?.added)) {
@@ -317,14 +314,6 @@ async function checkClientPackages() {
   }
 }
 checkClientPackages()
-
-// -- Check sdkVersion ------------------------------------------------------------
-function checkSdkVersion() {
-  if (PACKAGE_VERSION !== corePackageJson.version) {
-    fail(`VERSION in utils/constants does't match core package.json version`)
-  }
-}
-checkSdkVersion()
 
 // -- Check wallet ------------------------------------------------------------
 

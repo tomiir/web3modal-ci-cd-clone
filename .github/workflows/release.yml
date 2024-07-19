@@ -46,10 +46,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-        - name: Create Github Release
-          if: steps.changesets.outputs.published == 'true'
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          run: |
-            VERSION=$(node -pe "require('./packages/core/package.json').version")
-            gh release create "$VERSION" --target main
+      - name: Create Github Release
+        if: steps.changesets.outputs.published == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          VERSION=$(node -pe "require('./packages/core/package.json').version")
+          gh release create "$VERSION" --target main

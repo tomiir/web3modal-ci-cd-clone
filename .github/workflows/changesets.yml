@@ -26,6 +26,11 @@ jobs:
         with:
           node-version: 18.x
 
+      - name: Install dependencies
+        run: |
+          npm install --immutable
+        shell: bash
+
       - name: Create Release Pull Request
         id: create_pr
         uses: changesets/action@v1

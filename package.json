@@ -1,6 +1,6 @@
 {
   "name": "web3modal",
-  "version": "4.0.0",
+  "version": "5.0.6",
   "private": true,
   "type": "module",
   "scripts": {
@@ -26,7 +26,8 @@
     "clean": "rm -rf `find . -type d -name node_modules -o -name dist -o -name .next -o -name out`; rm package-lock.json",
     "changeset:pre": "changeset pre enter",
     "changeset:pre:exit": "changeset pre exit",
-    "changeset": "changeset; changeset version",
+    "changeset": "changeset",
+    "changeset:version": "changeset version",
     "publish:dry": "npm install; npm run build; changeset publish --dry-run",
     "publish:latest": "npm install; npm run build; changeset publish",
     "publish:alpha": "npm install; npm run build; changeset publish --tag alpha",
